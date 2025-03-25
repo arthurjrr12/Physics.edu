@@ -426,12 +426,12 @@ const LearningModulePage = ({ pathId }: { pathId: string }) => {
                       <h3 className="text-xl font-semibold text-neutral-900 mb-4">Concept Summary</h3>
                       
                       <div className="prose prose-violet max-w-none mb-6">
-                        <p>{currentModule.content}</p>
+                        <p>{currentModule?.content}</p>
                       </div>
                       
                       <h4 className="text-lg font-semibold text-neutral-900 mb-3">Learning Objectives:</h4>
                       <ul className="space-y-2 mb-6">
-                        {currentModule.learningObjectives.map((objective, index) => (
+                        {currentModule?.learningObjectives?.map((objective, index) => (
                           <li key={index} className="flex items-start">
                             <BookmarkCheck className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
                             <span>{objective}</span>
@@ -441,7 +441,7 @@ const LearningModulePage = ({ pathId }: { pathId: string }) => {
                       
                       <h4 className="text-lg font-semibold text-neutral-900 mb-3">Key Terms & Formulas:</h4>
                       <div className="flex flex-wrap gap-2 mb-6">
-                        {currentModule.keyTerms.map((term, index) => (
+                        {currentModule?.keyTerms?.map((term, index) => (
                           <Badge key={index} variant="outline" className="bg-primary/10 text-primary border-primary/20 px-3 py-1">
                             {term}
                           </Badge>
