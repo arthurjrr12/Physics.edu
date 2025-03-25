@@ -414,6 +414,64 @@ const LearningModulePage = ({ pathId }: { pathId: string }) => {
                   </TabsTrigger>
                 </TabsList>
                 
+                {/* Concept Summary & Formula Tab Content */}
+                <TabsContent value="concept" className="mt-0">
+                  <div className="max-w-2xl mx-auto">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6 }}
+                      className="bg-neutral-50 rounded-xl p-6"
+                    >
+                      <h3 className="text-xl font-semibold text-neutral-900 mb-4">Concept Summary</h3>
+                      
+                      <div className="prose prose-violet max-w-none mb-6">
+                        <p>{currentModule.content}</p>
+                      </div>
+                      
+                      <h4 className="text-lg font-semibold text-neutral-900 mb-3">Learning Objectives:</h4>
+                      <ul className="space-y-2 mb-6">
+                        {currentModule.learningObjectives.map((objective, index) => (
+                          <li key={index} className="flex items-start">
+                            <BookmarkCheck className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                            <span>{objective}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      <h4 className="text-lg font-semibold text-neutral-900 mb-3">Key Terms & Formulas:</h4>
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {currentModule.keyTerms.map((term, index) => (
+                          <Badge key={index} variant="outline" className="bg-primary/10 text-primary border-primary/20 px-3 py-1">
+                            {term}
+                          </Badge>
+                        ))}
+                      </div>
+                      
+                      <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4">
+                        <h5 className="flex items-center text-lg font-medium text-primary mb-2">
+                          <Lightbulb className="h-5 w-5 mr-2" />
+                          Pro Tips:
+                        </h5>
+                        <ul className="space-y-2 text-sm">
+                          <li className="flex items-start">
+                            <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Create flash cards for the key terms and formulas to help with memorization.</span>
+                          </li>
+                          <li className="flex items-start">
+                            <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Practice applying the concepts to real-world scenarios relevant to your career path.</span>
+                          </li>
+                          <li className="flex items-start">
+                            <CheckCircle2 className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                            <span>Connect with peers to discuss these concepts and deepen your understanding.</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </motion.div>
+                  </div>
+                </TabsContent>
+                
                 {/* Quiz Tab Content */}
                 <TabsContent value="quiz" className="mt-0">
                   <div className="max-w-2xl mx-auto">
