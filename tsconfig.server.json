@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "./server/dist",
+    "module": "ESNext",
+    "target": "ESNext",
+    "allowImportingTsExtensions": false,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",  // Added JSX support
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "include": ["server/**/*"],
+  "exclude": ["node_modules", "client", "**/*.test.ts"]
+}
