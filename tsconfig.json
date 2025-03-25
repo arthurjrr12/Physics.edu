@@ -11,8 +11,8 @@
     "jsx": "preserve",
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "emitDeclarationOnly": true,  // ✅ FIXED: ito dapat gamitin imbes na `noEmit`
     "allowImportingTsExtensions": true,
-    "noEmit": false,  // ✅ FIXED (dati may conflicting `true` at `false`)
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "types": ["node", "vite/client"],
