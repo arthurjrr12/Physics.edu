@@ -398,8 +398,12 @@ const LearningModulePage = ({ pathId }: { pathId: string }) => {
                 <p className="text-neutral-600 mt-2">Master key concepts through interactive learning and hands-on activities</p>
               </div>
 
-              <Tabs defaultValue="quiz" className="w-full">
-                <TabsList className="grid w-full grid-cols-2 mb-8">
+              <Tabs defaultValue="concept" className="w-full">
+                <TabsList className="grid w-full grid-cols-3 mb-8">
+                  <TabsTrigger value="concept" className="text-base">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Concept Summary & Formula
+                  </TabsTrigger>
                   <TabsTrigger value="quiz" className="text-base">
                     <BookOpen className="mr-2 h-4 w-4" />
                     Quiz Challenge

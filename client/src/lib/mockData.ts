@@ -49,170 +49,250 @@ export const modules: Module[] = [
   {
     id: "eng-intro",
     pathId: "engineering",
-    title: "Introduction",
-    description: "Basic principles and foundations",
+    title: "Scientific Method & Measurement",
+    description: "Foundation of scientific inquiry and measurement principles",
     order: 1,
     content: "Introduction to physics for engineering applications.",
     learningObjectives: [
-      "Understand the fundamental physics principles in engineering",
-      "Identify how physics concepts are applied in various engineering disciplines",
-      "Recognize the importance of physics in solving engineering problems"
+      "Understand and apply the scientific method to engineering problems",
+      "Master basic and advanced measurement techniques",
+      "Develop proficiency in vector calculations"
     ],
-    keyTerms: ["Force", "Energy", "Work", "Power", "Mechanics", "Vector"],
+    keyTerms: ["Scientific Method", "Hypothesis", "Measurement", "Units", "Vectors", "Vector Components"],
     stemActivities: [
       {
         id: "eng-intro-act1",
-        title: "Build a Load-Bearing Bridge",
-        description: "Design and construct a paper bridge that can support the maximum weight possible.",
-        materials: ["Paper sheets", "Scissors", "Tape", "Ruler", "Weights or coins for testing"],
+        title: "Vector Addition in Real Space",
+        description: "Create a physical model to demonstrate vector addition and component analysis.",
+        materials: ["Grid paper", "Colored strings", "Pushpins", "Protractor", "Ruler", "Weights"],
         steps: [
-          "Fold and cut paper to create structural components",
-          "Design your bridge with focus on distributing weight evenly",
-          "Test different shapes to find the strongest configuration",
-          "Assemble the final bridge design",
-          "Test how much weight your bridge can hold before collapsing"
+          "Draw a coordinate system on grid paper",
+          "Use pushpins to mark origin and endpoints",
+          "Represent vectors with colored strings",
+          "Demonstrate vector addition physically",
+          "Measure components and resultant vectors",
+          "Verify calculations with physical measurements"
         ],
-        expectedOutcome: "A paper bridge that demonstrates structural engineering principles and can support multiple coins or weights.",
-        scienceConnection: "This activity demonstrates principles of force distribution, structural integrity, and how shapes like triangles and arches can strengthen structures—concepts used by civil engineers.",
-        difficultyLevel: "beginner",
-        estimatedTime: "45 minutes"
+        expectedOutcome: "A physical demonstration that confirms vector addition calculations and component analysis.",
+        scienceConnection: "This activity demonstrates how vector mathematics translates to physical space—a concept critical for engineers when analyzing forces, velocities, and other vector quantities in real-world systems.",
+        difficultyLevel: "intermediate",
+        estimatedTime: "60 minutes"
       }
+    ],
+    subModules: [
+      "Basic Scientific Method", 
+      "Advanced Scientific Method", 
+      "Basic Measurement", 
+      "Advanced Measurement", 
+      "Basic Vectors Calculation", 
+      "Advanced Vectors Calculation"
     ]
   },
   {
     id: "eng-forces",
     pathId: "engineering",
     title: "Forces & Motion",
-    description: "Newton's laws and applications",
+    description: "Newton's laws and applications in various contexts",
     order: 2,
     content: "Understanding forces and motion in engineering contexts.",
     learningObjectives: [
-      "Apply Newton's three laws of motion to engineering problems",
-      "Calculate forces, acceleration, and momentum in systems",
-      "Analyze real-world engineering applications of force and motion"
+      "Apply Newton's laws to predict motion in various systems",
+      "Analyze equilibrium conditions and friction forces",
+      "Calculate motion parameters in horizontal, vertical, and circular systems"
     ],
-    keyTerms: ["Newton's Laws", "Friction", "Inertia", "Momentum", "Acceleration", "Force Vector"],
+    keyTerms: ["Newton's Laws", "Gravitation", "Equilibrium", "Friction", "Pendulum", "Projectile Motion"],
     stemActivities: [
       {
         id: "eng-forces-act1",
-        title: "Balloon-Powered Car",
-        description: "Design and build a car that moves using the principle of action-reaction (Newton's Third Law).",
-        materials: ["Cardboard", "Bottle caps or small wheels", "Straws", "Balloons", "Tape", "Wooden skewers (for axles)"],
+        title: "Inclined Plane Force Analyzer",
+        description: "Build an apparatus to measure and analyze forces on an inclined plane.",
+        materials: ["Wooden board", "Protractor", "Spring scale", "Various objects of different masses", "Sandpaper strips", "Smooth plastic sheets", "Digital kitchen scale"],
         steps: [
-          "Design a simple car chassis from cardboard",
-          "Create an axle system using straws and skewers",
-          "Attach bottle caps as wheels",
-          "Mount a balloon to the top with its opening facing backward",
-          "Inflate the balloon and release to propel the car forward",
-          "Measure distance traveled and make design improvements"
+          "Construct an adjustable inclined plane",
+          "Add different surface materials (smooth, rough)",
+          "Place objects of known mass on the plane",
+          "Measure force required to prevent sliding",
+          "Vary the angle and record measurements",
+          "Graph relationship between angle and force",
+          "Calculate coefficient of friction for different surfaces"
         ],
-        expectedOutcome: "A functional car that converts the potential energy in the balloon to kinetic energy, demonstrating Newton's Third Law.",
-        scienceConnection: "This activity demonstrates Newton's Third Law of Motion: for every action there is an equal and opposite reaction. As air rushes out of the balloon in one direction, the car moves in the opposite direction.",
+        expectedOutcome: "Data that demonstrates the relationship between incline angle, mass, surface texture, and the forces involved.",
+        scienceConnection: "This activity demonstrates Newton's laws, vector resolution, and friction forces on inclined planes. Engineers use these principles when designing ramps, roads, conveyor systems, and any application where objects move on sloped surfaces.",
         difficultyLevel: "intermediate",
-        estimatedTime: "60 minutes"
+        estimatedTime: "75 minutes"
       }
+    ],
+    subModules: [
+      "Newton's Laws Application", 
+      "Newton's Law of Gravitation", 
+      "Equilibrium and Friction Forces", 
+      "Motion in Inclined Planes", 
+      "Single Pendulum and Double Pendulum", 
+      "Motion (Horizontal, Vertical, Projectile and Circular)"
     ]
   },
   {
     id: "eng-energy",
     pathId: "engineering",
-    title: "Energy & Work",
-    description: "Conservation principles and applications",
+    title: "Energy, Work & Power",
+    description: "Energy transformation principles and relationships",
     order: 3,
     content: "Exploring energy transformation and conservation in engineering systems.",
     learningObjectives: [
-      "Differentiate between various forms of energy",
-      "Apply the law of conservation of energy to engineering problems",
-      "Calculate work, power, and efficiency in systems"
+      "Analyze potential and kinetic energy transformations",
+      "Apply the work-energy theorem to engineering problems",
+      "Calculate power in mechanical and electrical systems"
     ],
-    keyTerms: ["Potential Energy", "Kinetic Energy", "Conservation of Energy", "Efficiency", "Work", "Joule"],
+    keyTerms: ["Potential Energy", "Kinetic Energy", "Work-Energy Theorem", "Power", "Conservation of Energy", "Efficiency"],
     stemActivities: [
       {
         id: "eng-energy-act1",
-        title: "Marble Run Energy Transformer",
-        description: "Create a marble run that demonstrates energy transformations between potential and kinetic energy.",
-        materials: ["Cardboard tubes or foam pipe insulation cut in half", "Marbles", "Tape", "Scissors", "Ruler", "Stopwatch", "Meter stick"],
+        title: "Energy Conversion Efficiency Analyzer",
+        description: "Build a multi-stage energy conversion system and measure efficiency at each stage.",
+        materials: ["Small electric motor/generator", "LED lights", "Hand crank", "Multimeter", "Rubber bands", "Small weights", "Stopwatch"],
         steps: [
-          "Design a marble run with various heights and curves",
-          "Set up measurement points to track the marble's velocity",
-          "Create a data collection sheet",
-          "Run trials, releasing the marble from different heights",
-          "Calculate potential and kinetic energy at various points",
-          "Analyze where energy is conserved or lost to friction"
+          "Assemble a system converting mechanical energy to electrical energy to light",
+          "Apply measured mechanical work using weights or hand crank",
+          "Measure electrical output with multimeter",
+          "Measure light output using a light sensor",
+          "Calculate efficiency at each conversion stage",
+          "Identify where energy losses occur",
+          "Design improvements to increase system efficiency"
         ],
-        expectedOutcome: "A functioning marble run that allows for quantitative measurements of energy transformations.",
-        scienceConnection: "This activity demonstrates the conversion between potential energy (height × gravity × mass) and kinetic energy (½ × mass × velocity²), allowing students to verify the law of conservation of energy and identify energy losses.",
-        difficultyLevel: "intermediate",
-        estimatedTime: "75 minutes"
+        expectedOutcome: "A quantitative analysis of energy transformations and losses through multiple conversion stages.",
+        scienceConnection: "This activity demonstrates the law of conservation of energy while showing how energy transforms and diminishes through various conversions—a key concept in designing efficient mechanical, electrical, and thermal systems in engineering.",
+        difficultyLevel: "advanced",
+        estimatedTime: "90 minutes"
       }
+    ],
+    subModules: [
+      "Potential and Kinetic Energies", 
+      "Work-Energy Relationship", 
+      "Power"
     ]
   },
   {
     id: "eng-thermo",
     pathId: "engineering",
     title: "Thermodynamics",
-    description: "Heat transfer and engines",
+    description: "Heat transfer and thermal systems",
     order: 4,
     content: "Understanding thermodynamic principles in engineering applications.",
     learningObjectives: [
-      "Explain the laws of thermodynamics",
-      "Analyze heat transfer mechanisms",
-      "Evaluate efficiency in thermal systems and engines"
+      "Analyze temperature scales and heat transfer methods",
+      "Apply the laws of thermodynamics to engineering systems",
+      "Evaluate the efficiency of heat engines and refrigeration cycles"
     ],
-    keyTerms: ["Entropy", "Heat Transfer", "Thermal Expansion", "Conduction", "Convection", "Radiation"],
+    keyTerms: ["Temperature", "Heat Transfer", "Laws of Thermodynamics", "Entropy", "Carnot Cycle", "Thermal Efficiency"],
     stemActivities: [
       {
         id: "eng-thermo-act1",
-        title: "Build a Solar Thermal Collector",
-        description: "Design and build a simple solar thermal collector to convert solar energy to heat energy.",
-        materials: ["Black construction paper", "Aluminum foil", "Cardboard box", "Plastic wrap", "Thermometer", "Copper tubing (optional)", "Water container"],
+        title: "Heat Engine Demonstrator",
+        description: "Create a working model of a simple heat engine that converts thermal energy to mechanical work.",
+        materials: ["Glass flask", "Rubber stopper with hole", "Glass tubing", "Rubber tubing", "Toy turbine wheel", "Bunsen burner or hot plate", "Ice bath", "Thermometers"],
         steps: [
-          "Line a cardboard box with aluminum foil (reflective side up)",
-          "Position black construction paper inside to absorb heat",
-          "Create a clear plastic cover to trap heat",
-          "For advanced version: Create a water circulation system with copper tubing",
-          "Place in sunlight and measure temperature changes over time",
-          "Compare effectiveness of different designs"
+          "Set up a closed system with water in the flask",
+          "Create a temperature difference (hot source and cold sink)",
+          "Connect vapor output to drive a small turbine",
+          "Measure temperature of hot and cold reservoirs",
+          "Measure mechanical work output",
+          "Calculate thermal efficiency",
+          "Compare to theoretical Carnot efficiency"
         ],
-        expectedOutcome: "A device that demonstrates how solar radiation can be captured and converted to heat energy, with measurable temperature increases.",
-        scienceConnection: "This activity demonstrates principles of radiation, absorption, insulation, and heat transfer—key concepts in thermodynamics. It also shows how engineers apply these principles in renewable energy systems.",
+        expectedOutcome: "A functioning heat engine model that demonstrates conversion of thermal energy to mechanical work, with quantitative analysis of efficiency.",
+        scienceConnection: "This activity demonstrates the second law of thermodynamics and heat engine principles. Engineers apply these concepts when designing power plants, engines, refrigeration systems, and any thermal-mechanical energy conversion systems.",
         difficultyLevel: "advanced",
-        estimatedTime: "90 minutes"
+        estimatedTime: "120 minutes"
       }
+    ],
+    subModules: [
+      "Temperature and Temperature Scales", 
+      "Quantity of Heat and Methods of Heat Transfer", 
+      "Engines and Refrigerators", 
+      "Laws of Thermodynamics"
     ]
   },
   {
     id: "eng-em",
     pathId: "engineering",
     title: "Electromagnetism",
-    description: "Electricity and magnetism",
+    description: "Electricity, circuits, and magnetic fields",
     order: 5,
     content: "Exploring electromagnetic principles in engineering applications.",
     learningObjectives: [
-      "Understand the relationship between electricity and magnetism",
-      "Apply electromagnetic principles to engineering design",
-      "Build and analyze simple circuits and electromagnets"
+      "Design and analyze electric circuits using Ohm's Law",
+      "Calculate electrical potential, current, and resistance in circuits",
+      "Understand the relationship between electric and magnetic fields"
     ],
-    keyTerms: ["Current", "Voltage", "Resistance", "Magnetic Field", "Induction", "Electromagnet"],
+    keyTerms: ["Ohm's Law", "Electric Potential", "Resistance", "Current", "Magnetic Field", "Electromagnetic Induction"],
     stemActivities: [
       {
         id: "eng-em-act1",
-        title: "Build an Electric Motor",
-        description: "Construct a simple electric motor using magnets, wire, and a battery.",
-        materials: ["Insulated copper wire", "Strong neodymium magnets", "D-cell battery", "Battery holder", "Paper clips", "Electrical tape", "Sandpaper"],
+        title: "Electromagnetic Field Visualizer",
+        description: "Create apparatus to visualize and measure electromagnetic fields around current-carrying conductors.",
+        materials: ["Copper wire", "Iron filings", "Graph paper", "DC power supply", "Compass needles", "Magnets of various strengths", "Hall effect sensor (if available)"],
         steps: [
-          "Create a coil by wrapping copper wire around a cylindrical object",
-          "Sand the insulation off one half of each end of the coil",
-          "Construct a support structure using paper clips",
-          "Position the magnets near the coil",
-          "Connect the battery and observe the coil spinning",
-          "Experiment with different coil sizes and magnetic field strengths"
+          "Construct various wire configurations (straight, loop, solenoid)",
+          "Connect to power supply with variable current",
+          "Use iron filings to visualize magnetic fields",
+          "Create a mapping grid for quantitative measurement",
+          "Measure field strength at various distances",
+          "Graph the relationship between current and field strength",
+          "Compare experimental results with theoretical calculations"
         ],
-        expectedOutcome: "A functioning electric motor that converts electrical energy to mechanical energy through electromagnetic principles.",
-        scienceConnection: "This activity demonstrates how electrical current creates a magnetic field, and how the interaction between magnetic fields can create mechanical force—the fundamental principle behind electric motors used in countless engineering applications.",
+        expectedOutcome: "Visual and quantitative data showing how the shape and strength of magnetic fields relate to current and conductor configuration.",
+        scienceConnection: "This activity demonstrates the fundamental relationship between electricity and magnetism. These electromagnetic principles are the foundation for electric motors, generators, transformers, and countless electronic devices engineered for modern technology.",
         difficultyLevel: "advanced",
-        estimatedTime: "60 minutes"
+        estimatedTime: "90 minutes"
       }
+    ],
+    subModules: [
+      "Electric Circuits", 
+      "Ohm's Law", 
+      "Electric Potential", 
+      "Electrical Resistance", 
+      "Magnetic and Electric Fields"
+    ]
+  },
+  {
+    id: "eng-waves",
+    pathId: "engineering",
+    title: "Waves & Optics",
+    description: "Wave phenomena and optical principles",
+    order: 6,
+    content: "Understanding wave properties and optical systems in engineering applications.",
+    learningObjectives: [
+      "Analyze the fundamental properties of waves",
+      "Apply wave principles to sound and light phenomena",
+      "Design and evaluate optical instruments and systems"
+    ],
+    keyTerms: ["Wave Properties", "Sound Waves", "Light", "Reflection", "Refraction", "Optical Instruments"],
+    stemActivities: [
+      {
+        id: "eng-waves-act1",
+        title: "Advanced Spectroscope Builder",
+        description: "Design and construct a precise spectroscope to analyze light spectra.",
+        materials: ["Diffraction grating (1000+ lines/mm)", "Cardboard tube", "Black construction paper", "Razor blade/knife", "Protractor", "LED lights of various colors", "Compact fluorescent light", "Camera (optional)"],
+        steps: [
+          "Design and construct a light-tight housing",
+          "Create precision slit for light entry",
+          "Mount diffraction grating at precise angle",
+          "Calibrate using known light sources",
+          "Observe and record spectra from different sources",
+          "Measure wavelengths of spectral lines",
+          "Compare measured values with published data"
+        ],
+        expectedOutcome: "A functional spectroscope capable of separating light into its component wavelengths, with quantitative measurements of spectral lines.",
+        scienceConnection: "This activity demonstrates wave properties of light including diffraction and interference. Engineers apply these principles in designing optical instruments, communication systems, and analytical tools used in fields ranging from astronomy to materials science.",
+        difficultyLevel: "advanced",
+        estimatedTime: "120 minutes"
+      }
+    ],
+    subModules: [
+      "Wave Properties", 
+      "Sound Waves", 
+      "Light", 
+      "Optical Instruments"
     ]
   },
   

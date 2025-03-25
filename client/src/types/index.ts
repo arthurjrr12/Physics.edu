@@ -41,6 +41,7 @@ export interface Module {
   learningObjectives: string[];
   keyTerms: string[];
   stemActivities: StemActivity[];
+  subModules?: string[];
 }
 
 export interface QuizOption {

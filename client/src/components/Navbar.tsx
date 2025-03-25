@@ -14,7 +14,9 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Courses", path: "/paths" },
+    { name: "Career Paths", path: "/paths" },
+    { name: "Physics Learning Resources", path: "/resources" },
+    { name: "STEM Publications", path: "/publications" },
   ];
 
   return (
@@ -24,7 +26,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => window.location.href = '/'}>
               <i className="ri-atom-line text-primary text-3xl mr-2"></i>
-              <span className="font-poppins font-semibold text-xl text-primary">PhysicsEdu</span>
+              <span className="font-poppins font-semibold text-xl text-primary">Physics Digital Learning Support System</span>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navItems.map((item) => (
